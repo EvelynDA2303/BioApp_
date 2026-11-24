@@ -38,8 +38,9 @@ QFrame#LoginCard {
 }
 
 QLabel#logoIcon {
-    background-color: #203B4A;
-    color: #35D4C4;
+    background-color: #087F9C;
+    color: #EAF6FF;
+    border: 1px solid #36C5E0;
     border-radius: 12px;
     font-size: 25px;
     qproperty-alignment: AlignCenter;
@@ -122,6 +123,9 @@ QLabel#adminMessage {
       <width>45</width>
       <height>45</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>✧</string>
@@ -242,6 +246,28 @@ QLabel#adminMessage {
       <width>760</width>
       <height>63</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    background-color: #087F9C;
+    color: #EAF6FF;
+    border: 1px solid #36C5E0;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px;
+}
+
+QPushButton:hover {
+    background-color: #119DBB;
+    border: 1px solid #70E4F5;
+}
+
+QPushButton:pressed {
+    background-color: #075D75;
+}
+</string>
     </property>
     <property name="text">
      <string>Ingresar</string>

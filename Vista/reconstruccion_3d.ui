@@ -151,9 +151,9 @@ border: none;
     <property name="geometry">
      <rect>
       <x>15</x>
-      <y>55</y>
+      <y>80</y>
       <width>620</width>
-      <height>395</height>
+      <height>371</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -170,6 +170,26 @@ QFrame {
     </property>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblTamanoVolumen">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>42</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font-size: 11px;
+background: transparent;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>Matriz original: —
+Matriz ampliada (2×): —</string>
     </property>
    </widget>
   </widget>

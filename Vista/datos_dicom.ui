@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
+    <width>1002</width>
     <height>650</height>
    </rect>
   </property>
@@ -451,7 +451,7 @@ border: none;</string>
      <string>Institución:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="txtFechaEstudio">
     <property name="geometry">
      <rect>
       <x>15</x>
@@ -480,7 +480,7 @@ QLineEdit:focus {
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="txtModalidad">
     <property name="geometry">
      <rect>
       <x>235</x>
@@ -509,7 +509,7 @@ QLineEdit:focus {
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="txtDescripcionEstudio">
     <property name="geometry">
      <rect>
       <x>15</x>
@@ -538,7 +538,7 @@ QLineEdit:focus {
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="txtInstitucion">
     <property name="geometry">
      <rect>
       <x>235</x>
@@ -649,11 +649,16 @@ QTableWidget::item:selected {
 </string>
     </property>
     <property name="rowCount">
-     <number>8</number>
+     <number>13</number>
     </property>
     <property name="columnCount">
      <number>2</number>
     </property>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
     <row/>
     <row/>
     <row/>
@@ -710,6 +715,31 @@ QTableWidget::item:selected {
     <item row="7" column="0">
      <property name="text">
       <string>Descripción de serie</string>
+     </property>
+    </item>
+    <item row="8" column="0">
+     <property name="text">
+      <string>Tamaño del vóxel (alto)</string>
+     </property>
+    </item>
+    <item row="9" column="0">
+     <property name="text">
+      <string>Tamaño del vóxel (largo)</string>
+     </property>
+    </item>
+    <item row="10" column="0">
+     <property name="text">
+      <string>Tamaño del vóxel (ancho)</string>
+     </property>
+    </item>
+    <item row="11" column="0">
+     <property name="text">
+      <string>Matriz original</string>
+     </property>
+    </item>
+    <item row="12" column="0">
+     <property name="text">
+      <string>Matriz ampliada</string>
      </property>
     </item>
    </widget>

@@ -28,13 +28,12 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QFrame#panelPrincipal {
-    background-image: url(:/imagenes/bioappfondo1.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    border-image: url(:/imagenes/bioappfondo1.png) 0 0 0 0 stretch stretch;
+    border-radius: 18px;
 }</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::NoFrame</enum>
+     <enum>QFrame::StyledPanel</enum>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
@@ -102,19 +101,26 @@ font-weight: bold;</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: #2ACDBB;
-    color: #10212B;
-    border: none;
+      <string notr="true">
+QPushButton {
+    background-color: #087F9C;
+    color: #EAF6FF;
+    border: 1px solid #36C5E0;
     border-radius: 10px;
-    padding: 12px 28px;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
+    padding: 6px;
 }
 
 QPushButton:hover {
-    background-color: #54E0D0;
-}</string>
+    background-color: #119DBB;
+    border: 1px solid #70E4F5;
+}
+
+QPushButton:pressed {
+    background-color: #075D75;
+}
+</string>
      </property>
      <property name="text">
       <string>Comenzar</string>
