@@ -28,12 +28,13 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QFrame#panelPrincipal {
-    border-image: url(:/imagenes/bioappfondo1.png) 0 0 0 0 stretch stretch;
-    border-radius: 18px;
+    background-image: url(:/imagenes/bioappfondo1.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>

@@ -1,5 +1,5 @@
 <RCC>
-  <qresource prefix="imagenes">
-    <file>bioappfondo1.png</file>
-  </qresource>
+    <qresource prefix="/imagenes">
+        <file>bioappfondo1.png</file>
+    </qresource>
 </RCC>
