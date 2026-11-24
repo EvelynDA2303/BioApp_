@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BioApp | Panel de análisis</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget#centralwidget {
+    border-image: url(:/imagenes/bioappfondo1.png) 0 0 0 0 stretch stretch;
+}</string>
+   </property>
+   <widget class="QFrame" name="headerFrame">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>40</y>
+      <width>900</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#headerFrame {
+    background-color: rgba(15, 35, 60, 150);
+    border: 1px solid rgba(75, 210, 240, 100);
+    border-radius: 18px;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>20</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #FFFFFF;
+font-size: 24px;
+font-weight: bold;
+background-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string>BioApp</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="panelSubtituloLabel">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>60</y>
+       <width>181</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #A9B8CA;
+font-size: 13px;
+background-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string>Panel de análisis biomédico</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="usuarioTextoLabel">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>20</y>
+       <width>55</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #A9B8CA;
+font-size: 13px;
+background-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string>Usuario:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="rolTextoLabel">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>40</y>
+       <width>55</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #A9B8CA;
+font-size: 13px;
+background-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string>Rol: </string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ingresoTextoLabel">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>60</y>
+       <width>55</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #A9B8CA;
+font-size: 13px;
+background-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string>Ingreso:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QStackedWidget" name="menuStackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>160</y>
+      <width>901</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QStackedWidget#menuStackedWidget {
+    background-color: transparent;
+    border: none;
+}</string>
+    </property>
+    <widget class="QWidget" name="paginaImagenes">
+     <property name="styleSheet">
+      <string notr="true">QWidget#paginaImagenes {
+    background-color: rgba(15, 35, 60, 150);
+    border: 1px solid rgba(75, 210, 240, 100);
+    border-radius: 18px;
+}</string>
+     </property>
+     <widget class="QLabel" name="tituloImagenesLabel">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>251</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel#tituloImagenesLabel {
+    color: #EAF6FF;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+}</string>
+      </property>
+      <property name="text">
+       <string>ANÁLISIS DE IMÁGENES</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="descripcionImagenesLabel">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>40</y>
+        <width>271</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel#descripcionImagenesLabel {
+    color: #A9B8CA;
+    background-color: transparent;
+    font-size: 12px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Carga, procesa y visualiza imágenes médicas</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>60</y>
+        <width>800</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>0</y>
+         <width>221</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #4BD2F0;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: bold;
+}</string>
+       </property>
+       <property name="text">
+        <string>CARGAR ESTUDIO DICOM</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>20</y>
+         <width>301</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #C2D5E8;
+    background-color: transparent;
+    font-size: 12px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Selecciona una carpeta con las imagenes medicas </string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="cargarDicomButton">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>40</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>6</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#cargarDicomButton {
+    background-color: #147C9B;
+    color: #FFFFFF;
+    border: 1px solid #4BD2F0;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-weight: bold;
+}
+
+QPushButton#cargarDicomButton:hover {
+    background-color: #1A9FC2;
+}</string>
+       </property>
+       <property name="text">
+        <string>Seleccionar carpeta</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="tarjetaVisualizacionFrame">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>150</y>
+        <width>801</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame#tarjetaVisualizacionFrame {
+    background-color: rgba(15, 35, 60, 150);
+    border: 1px solid rgba(75, 210, 240, 100);
+    border-radius: 18px;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="vistaAxialLabel">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>14</y>
+         <width>240</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: rgba(5, 15, 28, 180);
+    color: #4BD2F0;
+    border: 1px solid #1C5577;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}</string>
+       </property>
+       <property name="text">
+        <string>AXIAL</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignHCenter|Qt::AlignTop</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="vistaCoronalLabel">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>14</y>
+         <width>240</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: rgba(5, 15, 28, 180);
+    color: #4BD2F0;
+    border: 1px solid #1C5577;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}</string>
+       </property>
+       <property name="text">
+        <string>CORONAL</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignHCenter|Qt::AlignTop</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="vistaSagitalLabel">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>14</y>
+         <width>240</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: rgba(5, 15, 28, 180);
+    color: #4BD2F0;
+    border: 1px solid #1C5577;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}</string>
+       </property>
+       <property name="text">
+        <string>SAGITAL</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignHCenter|Qt::AlignTop</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="corteLabel">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>140</y>
+         <width>55</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #EAF6FF;
+    background-color: transparent;
+    font-size: 12px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Corte:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="indiceCorteLabel">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>140</y>
+         <width>55</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #4BD2F0;
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: bold;
+}</string>
+       </property>
+       <property name="text">
+        <string>0 / 0</string>
+       </property>
+      </widget>
+      <widget class="QScrollBar" name="scrollCortes">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>140</y>
+         <width>661</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QScrollBar:horizontal {
+    background: rgba(5, 15, 28, 150);
+    height: 10px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #4BD2F0;
+    min-width: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: #7DE5F7;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0px;
+}</string>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="btnProcesamiento">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>340</y>
+        <width>200</width>
+        <height>42</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+    background-color: #087F9C;
+    color: #EAF6FF;
+    border: 1px solid #36C5E0;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px;
+}
+
+QPushButton:hover {
+    background-color: #119DBB;
+    border: 1px solid #70E4F5;
+}
+
+QPushButton:pressed {
+    background-color: #075D75;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Procesamiento</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnDatosDICOM">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>340</y>
+        <width>200</width>
+        <height>42</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+    background-color: #087F9C;
+    color: #EAF6FF;
+    border: 1px solid #36C5E0;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px;
+}
+
+QPushButton:hover {
+    background-color: #119DBB;
+    border: 1px solid #70E4F5;
+}
+
+QPushButton:pressed {
+    background-color: #075D75;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Datos DICOM</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnReconstruccion3D">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>340</y>
+        <width>200</width>
+        <height>42</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+    background-color: #087F9C;
+    color: #EAF6FF;
+    border: 1px solid #36C5E0;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px;
+}
+
+QPushButton:hover {
+    background-color: #119DBB;
+    border: 1px solid #70E4F5;
+}
+
+QPushButton:pressed {
+    background-color: #075D75;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Reconstrucción 3D</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="paginaSenales">
+     <property name="styleSheet">
+      <string notr="true">QWidget#paginaSenales {
+    background-color: rgba(15, 35, 60, 150);
+    border: 1px solid rgba(75, 210, 240, 100);
+    border-radius: 18px;
+}</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="../Recursos/bioapp.qrc"/>
+ </resources>
+ <connections/>
+</ui>
