@@ -22,9 +22,9 @@
    <property name="geometry">
     <rect>
      <x>25</x>
-     <y>20</y>
+     <y>39</y>
      <width>950</width>
-     <height>100</height>
+     <height>91</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -43,8 +43,8 @@
    <widget class="QLabel" name="lblBioApp">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>30</y>
+      <x>50</x>
+      <y>20</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -63,7 +63,7 @@ background-color: transparent;</string>
     <property name="geometry">
      <rect>
       <x>600</x>
-      <y>40</y>
+      <y>30</y>
       <width>331</width>
       <height>21</height>
      </rect>
@@ -90,8 +90,8 @@ background-color: transparent;</string>
    <widget class="QLabel" name="lblInfoUsuario">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>60</y>
+      <x>50</x>
+      <y>50</y>
       <width>55</width>
       <height>16</height>
      </rect>
@@ -103,6 +103,41 @@ background-color: transparent;</string>
     </property>
     <property name="text">
      <string>Usuario:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnVolver">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    background-color: #087F9C;
+    color: #EAF6FF;
+    border: 1px solid #36C5E0;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px;
+}
+
+QPushButton:hover {
+    background-color: #119DBB;
+    border: 1px solid #70E4F5;
+}
+
+QPushButton:pressed {
+    background-color: #075D75;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>←</string>
     </property>
    </widget>
   </widget>
@@ -893,6 +928,41 @@ border: none;</string>
      <number>3</number>
     </property>
    </widget>
+  </widget>
+  <widget class="QPushButton" name="btnCerrar">
+   <property name="geometry">
+    <rect>
+     <x>960</x>
+     <y>7</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton {
+    background-color: #087F9C;
+    color: #EAF6FF;
+    border: 1px solid #36C5E0;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px;
+}
+
+QPushButton:hover {
+    background-color: #119DBB;
+    border: 1px solid #70E4F5;
+}
+
+QPushButton:pressed {
+    background-color: #075D75;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>X</string>
+   </property>
   </widget>
  </widget>
  <resources/>
