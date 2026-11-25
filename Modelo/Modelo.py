@@ -206,8 +206,6 @@ class SerieDicom:
             if any(not np.allclose(d.ImageOrientationPatient,orient) or not np.allclose(d.PixelSpacing,ref.PixelSpacing) for d in datasets): raise ValueError('Geometría inconsistente')
             diferencias=np.diff([posiciones(d) for d in datasets]); esp=float(np.median(diferencias)) if len(diferencias) else float(ref.SliceThickness)
             if esp<=0 or (len(diferencias) and not np.allclose(diferencias,esp,rtol=.05,atol=.001)): raise ValueError('Espaciado irregular')
-            # Solo adquisiciones axiales alineadas: no confundir planos oblicuos con anatómicos.
-            # Reorientación de adquisiciones ortogonales al sistema LPS.
             direcciones=np.stack([normal,orient[3:],orient[:3]])
             ejes=np.argmax(np.abs(direcciones),axis=1)
             if len(set(ejes))!=3 or not np.allclose(np.max(np.abs(direcciones),axis=1),1,atol=.001): raise ValueError('Serie oblicua: requiere remuestreo espacial')
@@ -242,7 +240,6 @@ class SerieDicom:
         _,b=cv2.threshold(a,umbral,255,tipo)
         return cv2.morphologyEx(b,cv2.MORPH_OPEN,np.ones((kernel,kernel),np.uint8))
 
-# Operaciones sin interfaz ni ventanas de matplotlib.
 def cargarLlave(archivo,llave):
     a=archivo._ArchivoMAT__datos[llave]
     if not isinstance(a,np.ndarray) or not np.issubdtype(a.dtype,np.number) or np.iscomplexobj(a) or a.ndim!=3: raise ValueError('No es un arreglo, vuelva a intentarlo')
