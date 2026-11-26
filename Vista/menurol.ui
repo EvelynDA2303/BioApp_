@@ -132,6 +132,41 @@ background-color: transparent;</string>
       <string>Ingreso:</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="btnVolver">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>30</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton {
+    background-color: #087F9C;
+    color: #EAF6FF;
+    border: 1px solid #36C5E0;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px;
+}
+
+QPushButton:hover {
+    background-color: #119DBB;
+    border: 1px solid #70E4F5;
+}
+
+QPushButton:pressed {
+    background-color: #075D75;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>←</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QStackedWidget" name="menuStackedWidget">
     <property name="geometry">
@@ -333,7 +368,7 @@ QPushButton#cargarDicomButton:hover {
 }</string>
        </property>
        <property name="text">
-        <string>AXIAL</string>
+        <string/>
        </property>
        <property name="alignment">
         <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -359,7 +394,7 @@ QPushButton#cargarDicomButton:hover {
 }</string>
        </property>
        <property name="text">
-        <string>CORONAL</string>
+        <string/>
        </property>
        <property name="alignment">
         <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -385,7 +420,7 @@ QPushButton#cargarDicomButton:hover {
 }</string>
        </property>
        <property name="text">
-        <string>SAGITAL</string>
+        <string/>
        </property>
        <property name="alignment">
         <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -468,6 +503,78 @@ QScrollBar::sub-line:horizontal {
        </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="btnAxial">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>20</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QRadioButton {
+    background-color: rgba(5, 15, 28, 180);
+    color: #4BD2F0;
+    border: 1px solid #1C5577;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}</string>
+       </property>
+       <property name="text">
+        <string>AXIAL</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="btnCoronal">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>20</y>
+         <width>95</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QRadioButton {
+    background-color: rgba(5, 15, 28, 180);
+    color: #4BD2F0;
+    border: 1px solid #1C5577;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}</string>
+       </property>
+       <property name="text">
+        <string>CORONAL</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="btnSagital">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>20</y>
+         <width>95</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QRadioButton {
+    background-color: rgba(5, 15, 28, 180);
+    color: #4BD2F0;
+    border: 1px solid #1C5577;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}</string>
+       </property>
+       <property name="text">
+        <string>SAGITAL</string>
        </property>
       </widget>
      </widget>
@@ -1218,6 +1325,41 @@ QPushButton#abrirAnalisisMATButton:pressed {
      </widget>
     </widget>
    </widget>
+   <widget class="QPushButton" name="btnCerrar">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>10</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    background-color: #087F9C;
+    color: #EAF6FF;
+    border: 1px solid #36C5E0;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px;
+}
+
+QPushButton:hover {
+    background-color: #119DBB;
+    border: 1px solid #70E4F5;
+}
+
+QPushButton:pressed {
+    background-color: #075D75;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -1232,7 +1374,7 @@ QPushButton#abrirAnalisisMATButton:pressed {
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../Recursos/bioapp.qrc"/>
+  <include location="../OneDrive/Desktop/BioApp/Recursos/bioapp.qrc"/>
  </resources>
  <connections/>
 </ui>
