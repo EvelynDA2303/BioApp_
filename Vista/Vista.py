@@ -19,3 +19,10 @@ class VentanaLogin(QWidget):
 
         ruta = os.path.join(os.path.dirname(__file__), "login.ui")
         uic.loadUi(ruta, self)
+
+class VentanaMenuRol(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+        ruta = os.path.join(os.path.dirname(__file__), "menurol.ui")
+        uic.loadUi(ruta, self)
